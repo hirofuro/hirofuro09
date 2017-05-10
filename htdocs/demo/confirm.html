@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="stylesheet" href="../common/css/style.css"/>
+  <title>confirm</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      
+      let btn = document.getElementById("btn");
+      
+      btn.addEventListener('click', function(){
+        let cnf = 
+      confirm("今までヒロフロに参加したことはありますか？\nOK: YES\nキャンセル: NO");
+        
+        if(cnf == true){
+          alert("毎度ありがとうございます！");
+        }else{
+          alert("今後ともよろしくお願いします！");
+        }
+      });
+      
+    }, false);
+    
+  </script>
+</head>
+<body>
+  <div class="demo">
+    <h1>質問</h1>
+    <div class="demo_view">
+      <button id="btn">質問</button>
+    </div>
+    <div class="demo_code">
+      <h2>HTML</h2>
+      <pre><code>&lt;button id=&quot;btn&quot;&gt;&#36074;&#21839;&lt;/button&gt;
+</code></pre>
+      <h2>SCRIPT</h2>
+      <pre><code>let btn = document.getElementById("btn");
+btn.addEventListener('click', function(){
+  let cnf = 
+confirm("今までヒロフロに参加したことはありますか？\nOK: YES\nキャンセル: NO");
+  
+  if(cnf == true){
+    alert("毎度ありがとうございます！");
+  }else{
+    alert("今後ともよろしくお願いします！");
+  }
+});</code></pre>
+    </div>
+  </div>
+</body>

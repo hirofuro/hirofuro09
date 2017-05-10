@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="stylesheet" href="../common/css/style.css"/>
+  <title>event1</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      
+      let btn = document.getElementsByClassName('btn');
+    
+      for(let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', function(){
+          alert('Hello World');
+        });
+      }
+      
+    }, false);
+    
+  </script>
+</head>
+<body>
+  <div class="demo">
+    <h1>イベント(クラス)</h1>
+    <div class="demo_view">
+      <button class="btn">Hello</button>
+      <button class="btn">Hello</button>
+    </div>
+    <div class="demo_code">
+      <h2>HTML</h2>
+      <pre><code>&lt;button class=&quot;btn&quot;&gt;Hello&lt;/button&gt;
+
+&lt;button class=&quot;btn&quot;&gt;Hello&lt;/button&gt;
+</code></pre>
+      <h2>SCRIPT</h2>
+      <pre><code>let btn = document.getElementsByClassName('btn');
+
+for(let i = 0; i < btn.length; i++) {
+  btn[i].addEventListener('click', function(){
+    alert('Hello World');
+  });
+}</code></pre>
+    </div>
+  </div>
+</body>

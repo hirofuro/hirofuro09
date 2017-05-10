@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+//*------------------------------------*//
+//	Base
+//*------------------------------------*//
+
+@import 'base/reset';
+@import 'base/var';
+@import 'base/default';
+
+
+
+
+
+
+//*------------------------------------*//
+//	page
+//*------------------------------------*//
+body{
+  background-color: #fff4e3;
+}
+
+nav{
+  ul{
+    padding-left: 1.5em;
+    
+    li{
+      list-style: decimal;
+      font-size: 1.8rem;
+      
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.demo{
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px 0;
+  
+  h1{
+   font-size: 3rem;
+   margin-bottom: 30px;
+   font-weight: bold;
+   text-align: center;
+  }
+  
+  &_view{
+    padding: 20px 30px;
+    background-color: #fff;
+    margin-bottom: 50px;
+  }
+  &_code{
+    
+    pre{
+      font-size: 2rem;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      
+      &:not(:last-child){
+        margin-bottom: 40px;
+      }
+    }
+    
+    h2{
+      font-size: 2rem;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: solid 1px #ccc;
+    }
+  }
+}

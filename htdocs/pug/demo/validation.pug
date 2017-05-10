@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+html(lang="ja")
+head
+  meta(charset="UTF-8")
+  meta(name="keywords", content="")
+  meta(name="description", content="")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width")
+  link(rel="stylesheet", href="../common/css/style.css")
+  title validation
+  
+  script.
+    document.addEventListener("DOMContentLoaded", function(){
+      
+      let input = document.getElementById("input");
+
+      input.addEventListener('focusout', function(){
+        let inputVal = document.getElementById("input").value;
+        
+        if(inputVal.match(/\D/)){
+          document.getElementById("alert").innerHTML = inputVal + "は数値ではありません!";
+        }else{
+          document.getElementById("alert").innerHTML = "";
+        }
+        
+      });
+      
+    }, false);
+    
+  style.
+    #alert{
+      color: #f00;
+      padding: 5px 0;
+      font-size: 1.6rem;
+    }
+    
+    input{
+      width: 100%;
+      padding: .5em 1em;
+      font-size: 1.6rem;
+    }
+  
+body
+  
+  .demo
+    h1 バリデーション
+    .demo_view
+      
+      input#input(type="text" placeholder="数値を入力してください")
+      
+      p#alert
+      
+    .demo_code
+      h2 HTML
+      pre
+        code.
+          &lt;input id=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;&#25968;&#20516;&#12434;&#20837;&#21147;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;&quot;/&gt;
+          &lt;p id=&quot;alert&quot;&gt;&lt;/p&gt;
+        
+      h2 SCRIPT
+      pre
+        code.
+          let input = document.getElementById("input");
+
+          input.addEventListener('focusout', function(){
+            let inputVal = document.getElementById("input").value;
+            
+            if(inputVal.match(/\D/)){
+              document.getElementById("alert").innerHTML = inputVal + "は数値ではありません!";
+            }else{
+              document.getElementById("alert").innerHTML = "";
+            }
+            
+          });
