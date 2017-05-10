@@ -7,21 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width"/>
   <link rel="stylesheet" href="../common/css/style.css"/>
-  <title>イベント(関数)</title>
+  <title>イベント(クラス)</title>
   <script>
     document.addEventListener("DOMContentLoaded", function(){
       
-      let btn = document.getElementById('btn');
-      let btn2 = document.getElementById('btn2');
-      
-      function onBtn(elm){
-        elm.addEventListener('click', function(){
+      let btn = document.getElementsByClassName('btn');
+    
+      for(let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', function(){
           alert('Hello World');
         });
       }
-      
-      onBtn(btn);
-      onBtn(btn2);
       
     }, false);
     
@@ -29,29 +25,25 @@
 </head>
 <body>
   <div class="demo">
-    <h1>イベント(関数)</h1>
+    <h1>イベント(クラス)</h1>
     <div class="demo_view">
-      <button id="btn">Hello</button>
-      <button id="btn2">Hello</button>
+      <button class="btn">Hello</button>
+      <button class="btn">Hello</button>
     </div>
     <div class="demo_code">
       <h2>HTML</h2>
-      <pre><code>&lt;button id=&quot;btn&quot;&gt;Hello&lt;/button&gt;
+      <pre><code>&lt;button class=&quot;btn&quot;&gt;Hello&lt;/button&gt;
 
-&lt;button id=&quot;btn2&quot;&gt;Hello&lt;/button&gt;
+&lt;button class=&quot;btn&quot;&gt;Hello&lt;/button&gt;
 </code></pre>
       <h2>SCRIPT</h2>
-      <pre><code>let btn = document.getElementById('btn');
-let btn2 = document.getElementById('btn2');
+      <pre><code>let btn = document.getElementsByClassName('btn');
 
-function onBtn(elm){
-  elm.addEventListener('click', function(){
+for(let i = 0; i < btn.length; i++) {
+  btn[i].addEventListener('click', function(){
     alert('Hello World');
   });
-}
-
-onBtn(btn);
-onBtn(btn2);</code></pre>
+}</code></pre>
     </div>
   </div>
 </body>

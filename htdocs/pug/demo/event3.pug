@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="ja")
+head
+  meta(charset="UTF-8")
+  meta(name="keywords", content="")
+  meta(name="description", content="")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width")
+  link(rel="stylesheet", href="../common/css/style.css")
+  title イベント(クラス)
+  
+  script.
+    document.addEventListener("DOMContentLoaded", function(){
+      
+      let btn = document.getElementsByClassName('btn');
+
+      for(let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', function(){
+          alert('Hello World');
+        });
+      }
+      
+    }, false);
+  
+body
+  
+  .demo
+    h1 イベント(クラス)
+    .demo_view
+      
+      button.btn Hello
+      
+      button.btn Hello
+      
+    .demo_code
+      h2 HTML
+      pre
+        code.
+          &lt;button class=&quot;btn&quot;&gt;Hello&lt;/button&gt;
+
+          &lt;button class=&quot;btn&quot;&gt;Hello&lt;/button&gt;
+        
+      h2 SCRIPT
+      pre
+        code.
+          let btn = document.getElementsByClassName('btn');
+
+          for(let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', function(){
+              alert('Hello World');
+            });
+          }
